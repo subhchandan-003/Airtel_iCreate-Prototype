@@ -19,6 +19,8 @@
 <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M10 8.7l5 3.3-5 3.3z" fill="currentColor" stroke="none"/><line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
 <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M16.2 12h2.8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><circle cx="16.3" cy="12" r=".6" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.1" fill="none" stroke="currentColor" stroke-width="1.75"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 
 <div class="nav-wrap">
@@ -36,9 +38,21 @@
     </div>
     <div class="nav-cta">
       <a class="btn btn-primary" href="tour.html">See it work <svg class="icon"><use href="#i-arrow-r"/></svg></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="icon i-open"><use href="#i-menu"/></svg>
+        <svg class="icon i-close"><use href="#i-x"/></svg>
+      </button>
     </div>
   </nav>
 </div>
+<nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+  <a href="problem.html" class="active">Problem</a>
+  <a href="tour.html">Product Tour</a>
+  <a href="levers.html">Levers</a>
+  <a href="numbers.html">Numbers</a>
+  <a href="voices.html">Voices</a>
+  <a href="tour.html" class="nav-mobile-cta">See it work →</a>
+</nav>
 
 <header class="page-hero">
   <div class="hero-glow"></div>

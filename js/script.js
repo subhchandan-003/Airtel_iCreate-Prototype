@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){
   initNav();
+  initMobileNav();
   initHeroWords();
   initBrandTicker();
   initTour();
@@ -23,6 +24,26 @@ function initNav(){
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+/* ---------------- Mobile nav toggle ---------------- */
+function initMobileNav(){
+  var toggle = document.getElementById('nav-toggle');
+  var menu = document.getElementById('nav-mobile');
+  if (!toggle || !menu) return;
+  var close = function(){
+    menu.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle.addEventListener('click', function(){
+    var isOpen = !menu.classList.contains('open');
+    menu.classList.toggle('open', isOpen);
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 920) close(); });
 }
 
 /* ---------------- Hero headline stagger ---------------- */

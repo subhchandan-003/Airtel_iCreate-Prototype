@@ -15,6 +15,8 @@
 <svg style="display:none">
 <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.5c5.5-5 14.5-5 20 0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M5.5 12c3.6-3.2 9.4-3.2 13 0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M9 15.5c1.9-1.6 4.1-1.6 6 0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 
 <div class="nav-wrap">
@@ -32,9 +34,21 @@
     </div>
     <div class="nav-cta">
       <a class="btn btn-primary" href="numbers.html">See the numbers <svg class="icon"><use href="#i-arrow-r"/></svg></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="icon i-open"><use href="#i-menu"/></svg>
+        <svg class="icon i-close"><use href="#i-x"/></svg>
+      </button>
     </div>
   </nav>
 </div>
+<nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+  <a href="problem.html">Problem</a>
+  <a href="tour.html">Product Tour</a>
+  <a href="levers.html" class="active">Levers</a>
+  <a href="numbers.html">Numbers</a>
+  <a href="voices.html">Voices</a>
+  <a href="numbers.html" class="nav-mobile-cta">See the numbers →</a>
+</nav>
 
 <header class="page-hero">
   <div class="hero-glow"></div>
